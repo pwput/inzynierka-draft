@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/inzynierka-draft/static/css/main.5e17d019.css",
+    "main.js": "/inzynierka-draft/static/js/main.447762dc.js",
+    "static/js/787.cd7d7d7f.chunk.js": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js",
+    "index.html": "/inzynierka-draft/index.html",
+    "main.5e17d019.css.map": "/inzynierka-draft/static/css/main.5e17d019.css.map",
+    "main.447762dc.js.map": "/inzynierka-draft/static/js/main.447762dc.js.map",
+    "787.cd7d7d7f.chunk.js.map": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e17d019.css",
+    "static/js/main.447762dc.js"
+  ]
+}
