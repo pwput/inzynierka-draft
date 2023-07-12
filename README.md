@@ -1,1 +1,1 @@
-https://pwput.github.io/gene
+https://pwput.github.io/inzynierka-draft/
