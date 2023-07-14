@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gene/static/css/main.4c511823.css",
-    "main.js": "/gene/static/js/main.f2e877c1.js",
-    "static/js/787.cd7d7d7f.chunk.js": "/gene/static/js/787.cd7d7d7f.chunk.js",
-    "index.html": "/gene/index.html",
-    "main.4c511823.css.map": "/gene/static/css/main.4c511823.css.map",
-    "main.f2e877c1.js.map": "/gene/static/js/main.f2e877c1.js.map",
-    "787.cd7d7d7f.chunk.js.map": "/gene/static/js/787.cd7d7d7f.chunk.js.map"
+    "main.css": "/inzynierka-draft/static/css/main.4c511823.css",
+    "main.js": "/inzynierka-draft/static/js/main.fb2a6dae.js",
+    "static/js/787.cd7d7d7f.chunk.js": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js",
+    "index.html": "/inzynierka-draft/index.html",
+    "main.4c511823.css.map": "/inzynierka-draft/static/css/main.4c511823.css.map",
+    "main.fb2a6dae.js.map": "/inzynierka-draft/static/js/main.fb2a6dae.js.map",
+    "787.cd7d7d7f.chunk.js.map": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c511823.css",
-    "static/js/main.f2e877c1.js"
+    "static/js/main.fb2a6dae.js"
   ]
 }
