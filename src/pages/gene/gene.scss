@@ -1,0 +1,44 @@
+
+.top-charts-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.top-chart{
+  width: calc((100vw /3))
+}
+
+.bottom-chart{
+  width: calc((100vw /2));
+}
+
+.correlation-charts-container{
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.bottom-charts-container{
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1200px) {
+  .top-charts-container {
+    flex-direction: column;
+  }
+  .bottom-charts-container{
+    flex-direction: column;
+  }
+
+  .top-chart{
+    width: calc(100vw - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .bottom-chart{
+    width: calc(100vw - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}

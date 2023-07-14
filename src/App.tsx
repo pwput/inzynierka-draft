@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import { Route, Routes} from 'react-router-dom';
+import Gene from "./pages/gene/gene";
+import Wgcna from "./pages/wgcna/wgcna";
+import Phenotype from "./pages/phenotype/phenotype";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Gene/>}/>
+                <Route path="/gene" element={<Gene/>}/>
+                <Route path="/wgcna" element={<Wgcna/>}/>
+                <Route path="/phenotype" element={<Phenotype/>}/>
+            </Routes>
+            <Footer/>
+       </div>
+    );
 }
 
 export default App;
