@@ -1,24 +1,20 @@
 import React, {MouseEventHandler} from 'react';
-import {Checkbox} from "@mui/material";
 import "./dottedchart.scss"
 // @ts-ignore
 import CanvasJSReact from '@canvasjs/react-charts';
+import {IData} from "../../model/IGene";
 
-export type AxisProps = {
-    type: "number" | "category" | undefined,
-    dataKey: string,
+export interface AxisProps {
     name: string,
-    unit: string
+    suffix: string
 }
 
 
 export default function DottedChart(props: {
     chartTitle: string,
-    dataPoints: {x: number, y: number}[],
-    xAxisName: string,
-    xAxisSuffix: string,
-    yAxisName: string,
-    yAxisSuffix: string,
+    dataPoints: IData[],
+    xAxisProps: AxisProps,
+    yAxisProps: AxisProps,
     plotContainerHeight: string,
     tooltipContent: string,
     isClickable: boolean
@@ -44,23 +40,22 @@ export default function DottedChart(props: {
             text: props.chartTitle
         },
         axisX: {
-            title: props.xAxisName,
-            suffix: props.xAxisSuffix,
+            title: props.xAxisProps.name,
+            suffix: props.xAxisProps.suffix,
             crosshair: {
                 enabled: true,
                 snapToDataPoint: true
             }
         },
         axisY:{
-            title: props.yAxisName,
-            suffix: props.yAxisSuffix,
+            title: props.yAxisProps.name,
+            suffix: props.yAxisProps.suffix,
             crosshair: {
                 enabled: true,
                 snapToDataPoint: true
             }
         },
         data: [{
-            color: "blue",
             type: "scatter",
             markerSize: 8,
             toolTipContent: props.tooltipContent,

@@ -5,16 +5,18 @@
 }
 
 .top-chart{
-  width: calc((100vw /3))
+  width: calc((100vw /3));
+  aspect-ratio: 16/9;
 }
 
 .bottom-chart{
   width: calc((100vw /2));
+  aspect-ratio: 16/9;
 }
 
 .correlation-charts-container{
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 40px;
+  aspect-ratio: 16/9;
 }
 
 .bottom-charts-container{
@@ -32,13 +34,13 @@
 
   .top-chart{
     width: calc(100vw - 80px);
-    margin-left: 40px;
-    margin-right: 40px;
+    aspect-ratio: 16/9;
+    margin: 40px;
   }
 
   .bottom-chart{
     width: calc(100vw - 80px);
-    margin-left: 40px;
-    margin-right: 40px;
+    aspect-ratio: 16/9;
+    margin: 40px;
   }
 }
