@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/inzynierka-draft/static/css/main.4ba9bae7.css",
-    "main.js": "/inzynierka-draft/static/js/main.221c215c.js",
+    "main.css": "/inzynierka-draft/static/css/main.99e661a0.css",
+    "main.js": "/inzynierka-draft/static/js/main.8ee4e431.js",
     "static/js/787.cd7d7d7f.chunk.js": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js",
     "index.html": "/inzynierka-draft/index.html",
-    "main.4ba9bae7.css.map": "/inzynierka-draft/static/css/main.4ba9bae7.css.map",
-    "main.221c215c.js.map": "/inzynierka-draft/static/js/main.221c215c.js.map",
+    "main.99e661a0.css.map": "/inzynierka-draft/static/css/main.99e661a0.css.map",
+    "main.8ee4e431.js.map": "/inzynierka-draft/static/js/main.8ee4e431.js.map",
     "787.cd7d7d7f.chunk.js.map": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ba9bae7.css",
-    "static/js/main.221c215c.js"
+    "static/css/main.99e661a0.css",
+    "static/js/main.8ee4e431.js"
   ]
 }
