@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/inzynierka-draft/static/css/main.4c511823.css",
-    "main.js": "/inzynierka-draft/static/js/main.fb2a6dae.js",
+    "main.css": "/inzynierka-draft/static/css/main.4ba9bae7.css",
+    "main.js": "/inzynierka-draft/static/js/main.221c215c.js",
     "static/js/787.cd7d7d7f.chunk.js": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js",
     "index.html": "/inzynierka-draft/index.html",
-    "main.4c511823.css.map": "/inzynierka-draft/static/css/main.4c511823.css.map",
-    "main.fb2a6dae.js.map": "/inzynierka-draft/static/js/main.fb2a6dae.js.map",
+    "main.4ba9bae7.css.map": "/inzynierka-draft/static/css/main.4ba9bae7.css.map",
+    "main.221c215c.js.map": "/inzynierka-draft/static/js/main.221c215c.js.map",
     "787.cd7d7d7f.chunk.js.map": "/inzynierka-draft/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c511823.css",
-    "static/js/main.fb2a6dae.js"
+    "static/css/main.4ba9bae7.css",
+    "static/js/main.221c215c.js"
   ]
 }
