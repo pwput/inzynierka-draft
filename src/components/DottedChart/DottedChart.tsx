@@ -4,39 +4,53 @@ import "./dottedchart.scss"
 import CanvasJSReact from '@canvasjs/react-charts';
 import {IData} from "../../model/IGene";
 
-export interface AxisProps {
+export interface IAxisProps {
     name: string,
     suffix: string
 }
 
+export interface IClickable {
+    parentCallback?: (data: boolean) => void
+    checkIfCanBeSelected?: () => boolean
+}
 
-export default function DottedChart(props: {
+export interface TDottedChartProps {
     chartTitle: string,
     dataPoints: IData[],
-    xAxisProps: AxisProps,
-    yAxisProps: AxisProps,
-    plotContainerHeight: string,
+    xAxisProps: IAxisProps,
+    yAxisProps: IAxisProps,
     tooltipContent: string,
-    isClickable: boolean
-                                    }
-) {
+    plotContainerHeight?: string,
+    isZoomEnabled?: boolean
+    isClickable?: boolean
+    parentCallback?: (data: boolean) => void
+    checkIfCanBeSelected?: () => boolean
+}
+
+export default function DottedChart(props: TDottedChartProps) {
+    const isZoomEnabled = props.isZoomEnabled !== undefined ? props.isZoomEnabled : false
+    const isClickable = props.isClickable !== undefined ? props.isClickable : false
+    const plotContainerHeight = props.plotContainerHeight !== undefined ? props.plotContainerHeight : '100%'
+
     const [state, setState] = React.useState(false)
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setState(
-            event.target.checked
-        );
-    };
 
     const handleDivClick = (event: any) => {
-        setState(!state)
+        if (props.checkIfCanBeSelected !== undefined) {
+            if (!state && !props.checkIfCanBeSelected())
+                return
+            setState(!state)
+            if (props.parentCallback !== undefined)
+                props.parentCallback(!state)
+        }
     }
+
 
     const options = {
         theme: "light2",
         animationEnabled: true,
-        zoomEnabled: true,
-        title:{
+        zoomEnabled: isZoomEnabled,
+        title: {
             text: props.chartTitle
         },
         axisX: {
@@ -47,7 +61,7 @@ export default function DottedChart(props: {
                 snapToDataPoint: true
             }
         },
-        axisY:{
+        axisY: {
             title: props.yAxisProps.name,
             suffix: props.yAxisProps.suffix,
             crosshair: {
@@ -64,11 +78,15 @@ export default function DottedChart(props: {
     }
 
     const containerProps = {
-        height: props.plotContainerHeight
+        height: plotContainerHeight
     };
 
     return (
-        <div style={{borderColor: state? "blue" : "lightgrey"}} className={"chart-container"} onClick={props.isClickable? handleDivClick: ((any) => {})}>
+        <div
+            style={{borderColor: state ? "blue" : "lightgrey"}}
+            className={"chart-container"}
+            onClick={isClickable ? handleDivClick : ((any) => {
+            })}>
             <CanvasJSReact.CanvasJSChart containerProps={containerProps} options={options}/>
         </div>
     );

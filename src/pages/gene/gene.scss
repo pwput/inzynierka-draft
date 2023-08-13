@@ -9,11 +9,6 @@
   aspect-ratio: 16/9;
 }
 
-.bottom-chart{
-  width: calc((100vw /2));
-  aspect-ratio: 16/9;
-}
-
 .correlation-charts-container{
   margin: 40px;
   aspect-ratio: 16/9;
@@ -24,12 +19,19 @@
   flex-direction: row;
 }
 
+.bottom-chart{
+  width: calc((100vw /2));
+  aspect-ratio: 16/9;
+}
+
 @media screen and (max-width: 1200px) {
   .top-charts-container {
     flex-direction: column;
+    margin-bottom: 40px;
   }
   .bottom-charts-container{
     flex-direction: column;
+    margin-bottom: 40px;
   }
 
   .top-chart{
