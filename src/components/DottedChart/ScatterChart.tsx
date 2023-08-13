@@ -1,5 +1,5 @@
-import React, {MouseEventHandler} from 'react';
-import "./dottedchart.scss"
+import React from 'react';
+import "./ScatterChart.scss"
 // @ts-ignore
 import CanvasJSReact from '@canvasjs/react-charts';
 import {IData} from "../../model/IGene";
@@ -9,9 +9,9 @@ export interface IAxisProps {
     suffix: string
 }
 
-export interface IClickable {
-    parentCallback?: (data: boolean) => void
-    checkIfCanBeSelected?: () => boolean
+export interface IClickableProps {
+    parentCallback: (data: boolean) => void
+    checkIfCanBeSelected: () => boolean
 }
 
 export interface TDottedChartProps {
@@ -22,29 +22,24 @@ export interface TDottedChartProps {
     tooltipContent: string,
     plotContainerHeight?: string,
     isZoomEnabled?: boolean
-    isClickable?: boolean
-    parentCallback?: (data: boolean) => void
-    checkIfCanBeSelected?: () => boolean
+    clickableProps?: IClickableProps
 }
 
-export default function DottedChart(props: TDottedChartProps) {
+export default function ScatterChart(props: TDottedChartProps) {
     const isZoomEnabled = props.isZoomEnabled !== undefined ? props.isZoomEnabled : false
-    const isClickable = props.isClickable !== undefined ? props.isClickable : false
+    const isClickable = props.clickableProps !== undefined ? props.clickableProps : false
     const plotContainerHeight = props.plotContainerHeight !== undefined ? props.plotContainerHeight : '100%'
 
     const [state, setState] = React.useState(false)
 
-
     const handleDivClick = (event: any) => {
-        if (props.checkIfCanBeSelected !== undefined) {
-            if (!state && !props.checkIfCanBeSelected())
+        if (props.clickableProps !== undefined) {
+            if (!state && !props.clickableProps.checkIfCanBeSelected())
                 return
             setState(!state)
-            if (props.parentCallback !== undefined)
-                props.parentCallback(!state)
+            props.clickableProps.parentCallback(!state)
         }
     }
-
 
     const options = {
         theme: "light2",

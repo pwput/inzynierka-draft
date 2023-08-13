@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField";
-import React, {FormEvent, useState} from 'react';
+import React, {useState} from 'react';
 import {Autocomplete, Button} from "@mui/material";
-import "./search.scss"
+import "./Search.scss"
 
 export default function Search(
     props:{

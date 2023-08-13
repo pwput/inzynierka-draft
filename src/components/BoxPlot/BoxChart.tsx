@@ -1,12 +1,9 @@
-import React, {MouseEventHandler} from 'react';
-// @ts-ignore
-import {Checkbox} from "@mui/material";
-import "./boxplot.scss"
+import "./BoxChart.scss"
 // @ts-ignore
 import CanvasJSReact from '@canvasjs/react-charts';
 
 
-export default function BoxPlot(props: {
+export default function BoxChart(props: {
     chartTitle: string,
     dataPoints: { label: string, y: number[] }[],
     xAxisName: string, yAxisName: string,
@@ -14,7 +11,6 @@ export default function BoxPlot(props: {
     yValueFormatString: string,
 
 }) {
-    const [state, setState] = React.useState(false)
 
     const options = {
         theme: "light2",

@@ -5,15 +5,15 @@
     <file url="file://$PROJECT_DIR$/chars.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/check.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/g.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/BoxPlot/BoxPlot.tsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/DottedChart/DottedChart.tsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/DottedChart/dottedchart.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/BoxPlot/BoxChart.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/DottedChart/ScatterChart.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/DottedChart/ScatterChart.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/Footer/Footer.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Footer/Footer.tsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/Footer/footer.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/Navbar/Navbar.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/Navbar/navbar.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/Search/Search.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Search/Search.tsx" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/components/Search/search.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/components/Search/search2.les" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/pages/gene/gene.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/pages/gene/gene.tsx" charset="UTF-8" />

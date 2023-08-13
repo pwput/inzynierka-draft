@@ -1,5 +1,6 @@
 import React from "react";
-import "./wgcnainfo.scss"
+import "./Wgcnainfo.scss"
+
 export default function WgcnaInfo(
     props:{
         moduleName: string,

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Search from "../../components/Search/Search"
-import DottedChart from "../../components/DottedChart/DottedChart";
-import BoxPlot from "../../components/BoxPlot/BoxPlot"
+import ScatterChart from "../../components/DottedChart/ScatterChart";
+import BoxChart from "../../components/BoxPlot/BoxChart"
 import {Divider} from "@mui/material";
 import './gene.scss'
 import {IGene} from "../../model/IGene";
@@ -35,10 +35,8 @@ export default function Gene(props:{gene : IGene} ) {
             <Divider variant="middle"/>
             <div className={"top-charts-container"}>
                 <div className={"top-chart"}>
-                    <DottedChart
-                        checkIfCanBeSelected={canSelectPlot}
-                        parentCallback={setIsCNDataValue}
-                        isClickable={true}
+                    <ScatterChart
+                        clickableProps={{parentCallback: setIsCNDataValue, checkIfCanBeSelected:canSelectPlot}}
                         tooltipContent={"x: {x}, y: {y}"}
                         dataPoints={props.gene.CNData.dataArray}
                         chartTitle={"title"}
@@ -46,10 +44,8 @@ export default function Gene(props:{gene : IGene} ) {
                         yAxisProps={{name: "cn_value", suffix: ""}}/>
                 </div>
                 <div className={"top-chart"}>
-                    <DottedChart
-                        checkIfCanBeSelected={canSelectPlot}
-                        isClickable={true}
-                        parentCallback={setIsEXPDataValue}
+                    <ScatterChart
+                        clickableProps={{parentCallback: setIsEXPDataValue, checkIfCanBeSelected:canSelectPlot}}
                         tooltipContent={"accession_id: {x}, exp_value: {y}"}
                         dataPoints={props.gene.EXPData.dataArray}
                         chartTitle={"exp"}
@@ -57,10 +53,8 @@ export default function Gene(props:{gene : IGene} ) {
                         yAxisProps={{name: "exp_value", suffix: ""}}/>
                 </div>
                 <div className={"top-chart"}>
-                    <DottedChart
-                        checkIfCanBeSelected={canSelectPlot}
-                        isClickable={true}
-                        parentCallback={setIsmCGDataValue}
+                    <ScatterChart
+                        clickableProps={{parentCallback: setIsmCGDataValue, checkIfCanBeSelected:canSelectPlot}}
                         tooltipContent={"accession_id: {x}, mcg_value: {y}"}
                         dataPoints={props.gene.mCGData.dataArray}
                         chartTitle={"mCG"}
@@ -71,8 +65,7 @@ export default function Gene(props:{gene : IGene} ) {
             <Divider variant="middle"/>
         <p>Selected:{isCNDataValue? "cn": ""} {isEXPDataValue? "exp": ""} {ismCGDataValue? "mcg": ""}</p>
             <div className={"correlation-charts-container"}>
-                <DottedChart
-                    isClickable={false}
+                <ScatterChart
                     tooltipContent={"x: {x}, y: {y}"}
                     dataPoints={props.gene.mCGData.dataArray}
                     chartTitle={"title"}
@@ -82,7 +75,7 @@ export default function Gene(props:{gene : IGene} ) {
             <Divider variant="middle"/>
             <div className={"bottom-charts-container"}>
                 <div className={"bottom-chart"}>
-                    <BoxPlot
+                    <BoxChart
                         dataPoints={dataPoints}
                         plotContainerHeight={'100%'}
                         chartTitle={"title"}
@@ -91,7 +84,7 @@ export default function Gene(props:{gene : IGene} ) {
                         yValueFormatString={"#,##0.#"}/>
                 </div>
                 <div className={"bottom-chart"}>
-                    <BoxPlot
+                    <BoxChart
                         dataPoints={dataPoints}
                         plotContainerHeight={'100%'}
                         chartTitle={"title"}

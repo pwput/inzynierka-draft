@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Gene from "./pages/gene/gene";
 import Wgcna from "./pages/wgcna/wgcna";
 import Phenotype from "./pages/phenotype/phenotype";
